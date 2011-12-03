@@ -31,14 +31,21 @@
     <footer>
 
     </footer>
-  </div> <!--! end of #container -->
+  </div>
 
-
-  <!-- JavaScript at the bottom for fast page loading -->
+  <div id="templates">
+    <div class="owl stopped">
+      <div class="playoverlay">
+        <a href="#" class="play"></a>
+        <a href="#" class="stop"></a>
+        <a href="#" class="buffering"></a>
+      </div>
+    </div>
+  </div>
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.1.min.js"><\/script>')</script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
 
   <!-- scripts concatenated and minified via ant build script-->
   <script src="http://connect.soundcloud.com/sdk.js"></script>
