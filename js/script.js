@@ -65,7 +65,12 @@ $.fn.ready(function() {
 
   function playerGetOwls() {
     $.getJSON('http://api.soundcloud.com/playlists/1362578.json?client_id=' + clientid, function(owls) {
-      console.log(owls.tracks);
+      // console.log(owls.tracks);
+      var owlsInRow = $.serializeArray(owls.tracks);
+      console.log(owlsInRow);
+      $.each(owlsInRow, function(index, value){
+        // console.log(value);
+      });
     });
   }
 
