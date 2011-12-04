@@ -147,9 +147,9 @@ body, select, input, textarea {
 /* These selection declarations have to be separate
    No text-shadow: twitter.com/miketaylr/status/12228805301
    Also: hot pink! */
-::-moz-selection { background: #fe57a1; color:#fff; text-shadow: none; }
-::selection { background:#fe57a1; color:#fff; text-shadow: none; }
-a:link { -webkit-tap-highlight-color: #FF5E99; } /* j.mp/webkit-tap-highlight-color */
+::-moz-selection { color:#fff; text-shadow: none; }
+::selection { color:#fff; text-shadow: none; }
+a:link { -webkit-tap-highlight-color: none; } /* j.mp/webkit-tap-highlight-color */
 
 
 /**
