@@ -10,69 +10,38 @@ $.fn.ready(function() {
       win = window,
       clientid = '00952fa8399754a3a92a70c8b1157a5e';
 
-  // Initialize SC object
-  SC.initialize({
-    client_id: clientid
+  // Teh player callbacks
+  var owls = {
+    callbacks: {
+      play: function(owl) {
+        $('#owl-' + owl.id)
+          .removeClass('stopped')
+          .removeClass('buffering')
+          .addClass('playing');
+      },
+      pause: function(owl) {
+        $('#owl-' + owl.id)
+          .removeClass('playing')
+          .removeClass('buffering')
+          .addClass('stopped');
+      }
+    },
+    render: function(owl) {
+      return '<div id="owl-' + owl.id + '" class="owl"></div>';
+    },
+    data: {}
+  };
+  
+  $.getJSON('http://api.soundcloud.com/playlists/1362578.json?client_id=' + clientid, function(owlsData) {
+    var html = owlsData.tracks.map(function(owl) {
+      var audio = new Audio();
+      audio.addEventListener('play', owls.callbacks.play.bind(null, owl), false);
+      audio.addEventListener('pause', owls.callbacks.pause.bind(null, owl), false);
+      audio.src = owl.stream_url + '?client_id=' + clientid;
+      owl.audio = audio;
+      owls.data[owl.id] = owl;
+      return owls.render(owl);
+    }).join('');
+    $('#main').html(html);
   });
-
-  // Are we ready to Stream?
-  SC.whenStreamingReady(function(){
-    $('body').addClass('iCanStream');
-    playerGetOwls();
-  });
-
-  // Teh player
-  function owlPlay(url, owlDiv) {
-    function resetOwlDiv() {
-      if(win.soundDiv == owlDiv) {
-        streamStopAll;
-      };
-      owlDiv
-        .removeClass('playing')
-        .addClass('stopped');
-    };
-
-    owlDiv
-      .removeClass('stopped')
-      .removeClass('buffering')
-      .addClass('playing');
-
-    win.sound = soundManager.createSound({
-      id: 'sound',
-      url: url,
-      autoPlay: true,
-      onfinish: resetOwlDiv,
-      onstop:   resetOwlDiv
-    });
-
-    var soundObj = SC.stream(293);
-     soundObj.play();
-  }
-
-  function owlStop() {
-    if(win.sound != null) {
-      streamStopAll;
-    };
-    // if another player played, reset that button
-    if(win.owlDiv != null) {
-      win.owlDiv
-        .removeClass('playing')
-        .removeClass('buffering')
-        .addClass('stopped');
-      win.owlDiv = null;
-    };
-  }
-
-  function playerGetOwls() {
-    $.getJSON('http://api.soundcloud.com/playlists/1362578.json?client_id=' + clientid, function(owls) {
-      // console.log(owls.tracks);
-      var owlsInRow = $.serializeArray(owls.tracks);
-      console.log(owlsInRow);
-      $.each(owlsInRow, function(index, value){
-        // console.log(value);
-      });
-    });
-  }
-
-
 });
