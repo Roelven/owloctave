@@ -37,7 +37,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 footer {
-  border-top: 1px solid #c7b299;
+  border-top: 1px solid #bb905f;
   text-transform: none;
   color: #c7b299;
   margin: 48px 110px 0px 110px;
@@ -81,8 +81,8 @@ html { overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust:
 /* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
 a:hover, a:active { outline: 0; }
 
-a, a:active, a:visited { color: #c7b299; }
-a:hover { color: #c7b299; }
+a, a:active, a:visited { color: #bb905f; }
+a:hover { color: #bb905f; }
 
 /* Hand cursor on clickable input elements */
 label, input[type="button"], input[type="submit"], input[type="image"], button { cursor: pointer; }
