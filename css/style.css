@@ -123,6 +123,7 @@ h2 {
   font-size: 18px;
   color: #422813;
   font-weight: normal;
+  text-transform: none;
 }
 
 .keys {
