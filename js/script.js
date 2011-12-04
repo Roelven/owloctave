@@ -27,10 +27,15 @@ $.fn.ready(function() {
       }
     },
     render: function(owl) {
-      return '<div id="owl-' + owl.id + '" class="owl"></div>';
+      return '<div id="owl-' + owl.id + '" class="owl stopped"></div>';
     },
     data: {}
   };
+  
+  $('.owl').live('click', function() {
+    var owl = owls.data[+this.id.split('-')[1]];
+    owl.audio.play();
+  });
 
   $.getJSON('http://api.soundcloud.com/playlists/1362578.json?client_id=' + clientid, function(owlsData) {
     var html = owlsData.tracks.map(function(owl) {
