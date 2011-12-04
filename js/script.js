@@ -27,7 +27,7 @@ $.fn.ready(function() {
       }
     },
     render: function(owl) {
-      return '<div id="owl-' + owl.id + '" class="owl stopped"></div>';
+      return '<a id="owl-' + owl.id + '" class="owl stopped" href="#"></a>';
     },
     data: {}
   };

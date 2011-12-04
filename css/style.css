@@ -157,6 +157,7 @@ a:link { -webkit-tap-highlight-color: #FF5E99; } /* j.mp/webkit-tap-highlight-co
  */
 
 .keys .owl {
+  display: block;
   background: #ccc;
   width: 50px;
   height: 100px;
