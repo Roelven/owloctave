@@ -42,6 +42,7 @@ $.fn.ready(function() {
       var audio = new Audio();
       audio.addEventListener('play', owls.callbacks.play.bind(null, owl), false);
       audio.addEventListener('pause', owls.callbacks.pause.bind(null, owl), false);
+      audio.addEventListener('ended', owls.callbacks.pause.bind(null, owl), false);
       audio.src = owl.stream_url + '?client_id=' + clientid;
       owl.audio = audio;
       owls.data[owl.id] = owl;
