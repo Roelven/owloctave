@@ -31,7 +31,7 @@ $.fn.ready(function() {
     },
     data: {}
   };
-  
+
   $.getJSON('http://api.soundcloud.com/playlists/1362578.json?client_id=' + clientid, function(owlsData) {
     var html = owlsData.tracks.map(function(owl) {
       var audio = new Audio();
@@ -42,6 +42,6 @@ $.fn.ready(function() {
       owls.data[owl.id] = owl;
       return owls.render(owl);
     }).join('');
-    $('#main').html(html);
+    $('.keys').html(html);
   });
 });
