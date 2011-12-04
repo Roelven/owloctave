@@ -41,7 +41,6 @@ $.fn.ready(function() {
 
   $.getJSON('http://api.soundcloud.com/playlists/1362578.json?client_id=' + clientid, function(owlsData) {
     var html = owlsData.tracks.map(function(owl, i) {
-      console.log(owl);
       var audio = new Audio();
       audio.addEventListener('play', owls.callbacks.play.bind(null, owl), false);
       audio.addEventListener('pause', owls.callbacks.pause.bind(null, owl), false);
