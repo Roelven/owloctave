@@ -29,7 +29,7 @@ $.fn.ready(function() {
       }
     },
     render: function(owl) {
-      return '<a id="owl-' + owl.id + '" class="owl stopped" href="#" title="' + owl.title + '" data-key="' + owl.key_signature + '" style="background-image: url(img/' + owl.index + '.png)"></a>';
+      return '<a id="owl-' + owl.id + '" class="owl stopped" href="#" title="' + owl.title + '" style="background-image: url(img/' + owl.index + '.png)"></a>';
     },
     data: {}
   };
@@ -37,6 +37,7 @@ $.fn.ready(function() {
   $('.owl').live('click', function() {
     var owl = owls.data[+this.id.split('-')[1]];
     owl.audio.play();
+    $('h2:first').html(owl.title);
   });
 
   $.getJSON('http://api.soundcloud.com/playlists/1362578.json?client_id=' + clientid, function(owlsData) {
