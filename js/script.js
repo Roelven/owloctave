@@ -29,7 +29,7 @@ $.fn.ready(function() {
       }
     },
     render: function(owl) {
-      return '<a id="owl-' + owl.id + '" class="owl stopped" href="#"></a>';
+      return '<a id="owl-' + owl.id + '" class="owl stopped" href="#" title="' + owl.title + '" data-key="' + owl.key_signature + '" style="background-image: url(img/0' + owl.index + '.png)"></a>';
     },
     data: {}
   };
@@ -40,13 +40,15 @@ $.fn.ready(function() {
   });
 
   $.getJSON('http://api.soundcloud.com/playlists/1362578.json?client_id=' + clientid, function(owlsData) {
-    var html = owlsData.tracks.map(function(owl) {
+    var html = owlsData.tracks.map(function(owl, i) {
+      console.log(owl);
       var audio = new Audio();
       audio.addEventListener('play', owls.callbacks.play.bind(null, owl), false);
       audio.addEventListener('pause', owls.callbacks.pause.bind(null, owl), false);
       audio.addEventListener('ended', owls.callbacks.pause.bind(null, owl), false);
       audio.src = owl.stream_url + '?client_id=' + clientid;
       owl.audio = audio;
+      owl.index = i + 1;
       owls.data[owl.id] = owl;
       return owls.render(owl);
     }).join('');
