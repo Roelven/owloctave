@@ -118,6 +118,13 @@ h1 {
   width: 100%;
 }
 
+h2 {
+  text-align: center;
+  font-size: 18px;
+  color: #422813;
+  font-weight: normal;
+}
+
 .keys {
   margin: 155px 60px 0px 60px;
 }
