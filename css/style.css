@@ -157,13 +157,16 @@ a:link { -webkit-tap-highlight-color: none; } /* j.mp/webkit-tap-highlight-color
  *
  * Author: Roel van der Ven
  */
+ 
+html {
+  background: url('../img/bkgd.jpg') 50% 0 no-repeat #422813;
+}
 
 body {
   margin: auto;
   padding: auto;
   width: 1024px;
-  border: 1px solid #000;
-  background: url('../img/forest.jpg') 50% 0 no-repeat #422813;
+  background: url('../img/forest.jpg') 50% 0 no-repeat transparent;
   z-index: 1;
 }
 
@@ -196,14 +199,18 @@ h1 {
   background-color: transparent;
   background-repeat: no-repeat;
   background-size: 91%;
-  z-index: 1;
 }
 
 #owl-29656334, #owl-29656338, #owl-29656343, #owl-29656346, #owl-29656356 {
-  margin-top: -155px;
-  z-index: -150;
+  margin-top: -110px;
   margin-right: -150px;
 }
+
+#owl-29656356 {
+  margin-left: -45px;
+  width: 200px;
+}
+
 
 .tones {
   clear: both;
