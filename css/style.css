@@ -153,8 +153,15 @@ a:link { -webkit-tap-highlight-color: #FF5E99; } /* j.mp/webkit-tap-highlight-co
 /**
  * Primary styles
  *
- * Author: 
+ * Author: Roel van der Ven
  */
+
+body {
+  margin: auto;
+  padding: auto;
+  width: 1024px;
+  border: 1px solid #ccc;
+}
 
 .keys .owl {
   display: block;
@@ -163,6 +170,19 @@ a:link { -webkit-tap-highlight-color: #FF5E99; } /* j.mp/webkit-tap-highlight-co
   height: 100px;
   float: left;
   margin: 5px;
+}
+
+.tones {
+  clear: both;
+  width: 100%;
+}
+
+.tones span {
+  display: block;
+  float: left;
+  width: 50px;
+  margin: 5px;
+  text-align: center;
 }
 
 
