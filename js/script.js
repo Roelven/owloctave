@@ -1,6 +1,8 @@
-/* Author: 
-  Roel van der Ven
-  Music Hack Day London 2011
+/* Author:
+
+  Roel van der Ven / Tomás Senart
+  Music Hack Day London, December 2011
+
 */
 
 $.fn.ready(function() {
@@ -31,7 +33,7 @@ $.fn.ready(function() {
     },
     data: {}
   };
-  
+
   $('.owl').live('click', function() {
     var owl = owls.data[+this.id.split('-')[1]];
     owl.audio.play();
