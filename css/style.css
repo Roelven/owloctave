@@ -139,7 +139,9 @@ body, select, input, textarea {
   /* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */
   color: #444;
   /* Set your base font here, to apply evenly */
-  /* font-family: Georgia, serif;  */
+  font-family: Georgia, Serif;
+  font-style: italic;
+  text-transform: uppercase;
 }
 
 /* These selection declarations have to be separate
@@ -160,7 +162,16 @@ body {
   margin: auto;
   padding: auto;
   width: 1024px;
-  border: 1px solid #ccc;
+  border: 1px solid #000;
+  background: #422813;
+}
+
+h1 {
+  font-size: 40px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #422813;
+  width: 100%;
 }
 
 .keys .owl {
@@ -175,6 +186,8 @@ body {
 .tones {
   clear: both;
   width: 100%;
+  font-size: 18px;
+  color: #fff;
 }
 
 .tones span {
