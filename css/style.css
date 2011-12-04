@@ -149,7 +149,7 @@ body, select, input, textarea {
    Also: hot pink! */
 ::-moz-selection { color:#fff; text-shadow: none; }
 ::selection { color:#fff; text-shadow: none; }
-a:link { -webkit-tap-highlight-color: none; } /* j.mp/webkit-tap-highlight-color */
+a:link { -webkit-tap-highlight-color: rgba(0,0,0,0); } /* j.mp/webkit-tap-highlight-color */
 
 
 /**
