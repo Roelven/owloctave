@@ -36,6 +36,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+footer {
+  border-top: 1px solid #fff;
+  text-transform: none;
+  color: #fff;
+  margin: 70px 110px 0px 110px;
+  line-height: 1.5;
+  text-align: center;
+  padding-top: 15px;
+  height: 60px;
+}
+
 blockquote, q { quotes: none; }
 
 blockquote:before, blockquote:after,
@@ -70,8 +81,8 @@ html { overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust:
 /* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
 a:hover, a:active { outline: 0; }
 
-a, a:active, a:visited { color: #607890; }
-a:hover { color: #036; }
+a, a:active, a:visited { color: #fff; }
+a:hover { color: #fff; }
 
 /* Hand cursor on clickable input elements */
 label, input[type="button"], input[type="submit"], input[type="image"], button { cursor: pointer; }
@@ -131,7 +142,7 @@ h2 {
 }
 
 .tones {
-  margin: 0px 60px;
+  margin: 20px 60px;
 }
 
 .keys .owl {
