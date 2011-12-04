@@ -139,7 +139,7 @@ h1 {
   background-repeat: no-repeat;
   background-size: 91%;
   position: relative;
-  -webkit-transition: all .1s ease-in-out;
+  -webkit-transition: all .1s ease-out;
 }
 
 #owl-29656334, #owl-29656338, #owl-29656343, #owl-29656346, #owl-29656356 {
@@ -153,11 +153,11 @@ h1 {
 }
 
 #owl-29656334.playing, #owl-29656338.playing, #owl-29656343.playing, #owl-29656346.playing, #owl-29656356.playing {
-  -webkit-transform: rotate(20deg) scale(1.1);
+  -webkit-transform: rotate(10deg) scale(1.2);
 }
 
 .keys .owl.playing {
-  -webkit-transform: rotate(-20deg) scale(1.2);
+  -webkit-transform: rotate(-10deg) scale(1.2);
 }
 
 .tones {
