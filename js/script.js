@@ -29,7 +29,7 @@ $.fn.ready(function() {
       }
     },
     render: function(owl) {
-      return '<a id="owl-' + owl.id + '" class="owl stopped" href="#" title="' + owl.title + '" data-key="' + owl.key_signature + '" style="background-image: url(img/0' + owl.index + '.png)"></a>';
+      return '<a id="owl-' + owl.id + '" class="owl stopped" href="#" title="' + owl.title + '" data-key="' + owl.key_signature + '" style="background-image: url(img/' + owl.index + '.png)"></a>';
     },
     data: {}
   };

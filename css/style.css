@@ -164,6 +164,7 @@ body {
   width: 1024px;
   border: 1px solid #000;
   background: url('../img/forest.jpg') 50% 0 no-repeat #422813;
+  z-index: 1;
 }
 
 h1 {
@@ -175,8 +176,12 @@ h1 {
   width: 100%;
 }
 
-.keys, .tones {
-  margin: 0px 60px  ;
+.keys {
+  margin: 155px 60px 0px 60px;
+}
+
+.tones {
+  margin: 0px 60px;
 }
 
 .keys .owl {
@@ -191,6 +196,13 @@ h1 {
   background-color: transparent;
   background-repeat: no-repeat;
   background-size: 91%;
+  z-index: 1;
+}
+
+#owl-29656334, #owl-29656338, #owl-29656343, #owl-29656346, #owl-29656356 {
+  margin-top: -155px;
+  z-index: -150;
+  margin-right: -150px;
 }
 
 .tones {
