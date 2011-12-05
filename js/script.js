@@ -34,7 +34,8 @@ $.fn.ready(function() {
     data: {}
   };
 
-  $('.owl').live('click', function() {
+  $('.owl').live('click', function(e) {
+    e.preventDefault();
     var owl = owls.data[+this.id.split('-')[1]];
     owl.audio.play();
     $('h2:first').html(owl.title);
